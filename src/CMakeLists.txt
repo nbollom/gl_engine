@@ -16,5 +16,5 @@ find_package(glm REQUIRED)
 add_executable(engine ${SOURCE_FILES})
 
 target_include_directories(engine PUBLIC ${OPENGL_INCLUDE_DIR} ../3rdparty/gl3w/include/ ../3rdparty/imgui/) #${PNG_INCLUDE_DIR} ${JPEG_INCLUDE_DIR} ${IL_INCLUDE_DIR})
-target_link_libraries(engine ${OPENGL_gl_LIBRARY} gl3w imgui glfw glm) #${PNG_LIBRARY} ${JPEG_LIBRARIES} ${IL_LIBRARIES} ${ILU_LIBRARIES})
+target_link_libraries(engine ${OPENGL_gl_LIBRARY} gl3w imgui glfw glm dl) #${PNG_LIBRARY} ${JPEG_LIBRARIES} ${IL_LIBRARIES} ${ILU_LIBRARIES})
 
