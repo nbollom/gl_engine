@@ -20,7 +20,7 @@ set(SOURCE_FILES
         sprite.cpp
         sprite.h)
 
-cmake_policy(SET CMP0072 NEW)
+set(OpenGL_GL_PREFERENCE GLVND)
 
 find_package(glfw3 3.2 REQUIRED)
 find_package(OpenGL REQUIRED)
