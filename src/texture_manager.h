@@ -27,6 +27,7 @@ class TextureManager {
 
 private:
     std::map<std::string, std::shared_ptr<Texture>> textures;
+    std::map<std::string, FixedSizeSpritesheetTexture*> fixed_size_spritesheet_textures;
 
 public:
     TextureManager();
@@ -34,7 +35,11 @@ public:
     static std::shared_ptr<TextureManager> GetDefaultManager();
 
     void PreloadTextures(const std::vector<std::string> &filenames);
+    void PreloadSpritesheetWithFixedSize(const std::string &filename, const int &width, const int &height);
+    void PreloadSpriteSheetWithDefinition(const std::string &filename, const std::string &definition_file);
     std::shared_ptr<Texture> GetTexture(const std::string &filename);
+    std::shared_ptr<Texture> GetTextureFromFixedSizeSpritesheet(const std::string &filename, int x, int y);
+    std::shared_ptr<Texture> GetTextureFromDefinedSpritesheet(const std::string &filename, const std::string &name);
     void UnloadTextures(const std::vector<std::string> &filenames);
     void UnloadTexture(const std::string &filename);
 
