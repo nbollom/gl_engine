@@ -10,7 +10,7 @@ set(SOURCE_FILES
     scene.cpp
         texture_manager.cpp texture_manager.h inlines.h texture.h vertex_manager.cpp vertex_manager.h vertex_array.cpp vertex_array.h shader_program.cpp shader_program.h)
 
-cmake_policy(SET CMP0072 NEW)
+set(OpenGL_GL_PREFERENCE GLVND)
 
 find_package(glfw3 3.2 REQUIRED)
 find_package(OpenGL REQUIRED)
