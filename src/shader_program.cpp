@@ -86,7 +86,7 @@ std::shared_ptr<ShaderProgram> ShaderProgram::DefaultShader() {
                 "uniform sampler2D tex;\n"
                 "out vec4 FragColor;\n"
                 "void main() {\n"
-                "    FragColor = texture2D(tex, fuv) * vec4(color, 1.0);\n"
+                "    FragColor = texture(tex, fuv) * vec4(color, 1.0);\n"
                 "}\n";
 //        default_shader = std::make_shared<ShaderProgram>(vertex_shader_text, fragment_shader_text);
 //    }
